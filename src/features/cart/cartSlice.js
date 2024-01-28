@@ -1,5 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+/**
+ * define all order related state
+ */
+
 const initialState = {
   cart: [],
 };

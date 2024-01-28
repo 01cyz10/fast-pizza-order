@@ -5,6 +5,10 @@ import { addItem, getCurrentQuantityById } from '../cart/cartSlice';
 import DeleteItem from '../cart/DeleteItem';
 import UpdateItemQuantity from '../cart/UpdateItemQuantity';
 
+/**
+ * Pizza item, image, price, ingredient, order button
+ */
+
 function MenuItem({ pizza }) {
   const dispatch = useDispatch();
   const currentQuantity = useSelector(getCurrentQuantityById(pizza.id));
@@ -64,20 +68,3 @@ function MenuItem({ pizza }) {
 }
 
 export default MenuItem;
-
-/**
- *  const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
-    return (
-    <li>
-      <img src={imageUrl} alt={name} />
-      <div>
-        <p>{name}</p>
-        <p>{ingredients.join(', ')}</p>
-        <div>
-          {!soldOut ? <p>{formatCurrency(unitPrice)}</p> : <p>Sold out</p>}
-        </div>
-      </div>
-    </li>
-    );
- * 
- */
